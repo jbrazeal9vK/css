@@ -1,18 +1,21 @@
-<div>
-  <% for post in @posts %>
-    <div>
-      <h4>
-        <%# find user who created post %>
-        <% user = User.find_by({ "id" => post["user_id"] }) %>
-        <%# handle any potential bad data where the post is missing a user %>
-        <% if user %>
-          <%= user["first_name"] %>
-        <% else %>
-          anonymous
-        <% end %>
-      </h4>
-      <img src="<%= post["image"] %>">
-      <p><%= post["body"] %></p>
-    </div>
-  <% end %>
+
+<div class="row">
+  <div>
+    <% for post in @posts %>
+      <div class="col-lg-3 col-lg-6">
+        <h4>
+          <%# find user who created post %>
+          <% user = User.find_by({ "id" => post["user_id"] }) %>
+          <%# handle any potential bad data where the post is missing a user %>
+          <% if user %>
+            <%= user["first_name"] %>
+          <% else %>
+            anonymous
+          <% end %>
+        </h4>
+        <img src="<%= post["image"] %>" class="img-fluid">
+        <p><%= post["body"] %></p>
+      </div>
+    <% end %>
+  </div>
 </div>
