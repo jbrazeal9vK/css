@@ -1,0 +1,28 @@
+body {
+  background-color:aquamarine;
+  margin-left: 30px;
+}
+
+h1 {
+  color: skyblue;
+  font-size: 70px;
+}
+
+p {
+  color: purple;
+  font-size: 36px;
+}
+
+p a {
+  color: pink;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+#boba {
+  color: green
+}
+
+.bright {
+  color:lime
+}
